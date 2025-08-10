@@ -1,3 +1,5 @@
+# ABANDONED IN FAVOR OF https://github.com/Excinerus/retroll
+
 # Modified for RET, Twow guild in Tel'abim
 ## Roll commands for RET
 - /ret roll (mainspec roll)
