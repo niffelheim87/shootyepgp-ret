@@ -383,16 +383,11 @@ function sepgp_standings:BuildStandingsTable()
     local ep = (sepgp:get_ep_v3(name,officernote) or 0) 
     local gp = (sepgp:get_gp_v3(name,officernote) or sepgp.VARS.basegp)
     local main, main_class, main_rank = sepgp:parseAlt(name,officernote)
-    
-    -- Check if the player is a pug
-    local pugName = sepgp:getPugName(name)
-    local displayName = pugName and string.format("%s (%s)", pugName, name) or name
-
     if (main) then
-      if ((sepgp._playerName) and (name == sepgp._playerName)) then
+      if ((self._playerName) and (name == self._playerName)) then
         if (not sepgp_main) or (sepgp_main and sepgp_main ~= main) then
           sepgp_main = main
-          sepgp:defaultPrint(L["Your main has been set to %s"],sepgp_main)
+          self:defaultPrint(L["Your main has been set to %s"],sepgp_main)
         end
       end
       main = C:Colorize(BC:GetHexColor(main_class), main)
@@ -403,10 +398,10 @@ function sepgp_standings:BuildStandingsTable()
     if ep > 0 then
       if (sepgp_raidonly) and next(r) then
         if r[name] then
-          table.insert(t,{displayName,class,armor_class,ep,gp,ep/gp,name})
+          table.insert(t,{name,class,armor_class,ep,gp,ep/gp})
         end
       else
-        table.insert(t,{displayName,class,armor_class,ep,gp,ep/gp,name})
+      	table.insert(t,{name,class,armor_class,ep,gp,ep/gp})
       end
     end
   end
@@ -432,7 +427,6 @@ function sepgp_standings:BuildStandingsTable()
   return t
 end
 
-
 function sepgp_standings:OnTooltipUpdate()
   local cat = T:AddCategory(
       "columns", 4,
@@ -444,7 +438,7 @@ function sepgp_standings:OnTooltipUpdate()
   local t = self:BuildStandingsTable()
   local separator
   for i = 1, table.getn(t) do
-    local displayName, class, armor_class, ep, gp, pr, originalName = unpack(t[i])
+    local name, class, armor_class, ep, gp, pr = unpack(t[i])
     if (sepgp_groupbyarmor) or (sepgp_groupbyrole) then
       if not (separator) then
         if (sepgp_groupbyarmor) then
@@ -477,7 +471,7 @@ function sepgp_standings:OnTooltipUpdate()
         end
       end
     end
-    local text = C:Colorize(BC:GetHexColor(class), displayName)
+    local text = C:Colorize(BC:GetHexColor(class), name)
     local text2, text4
     if sepgp_minep > 0 and ep < sepgp_minep then
       text2 = C:Red(string.format("%.4g", ep))
@@ -487,7 +481,7 @@ function sepgp_standings:OnTooltipUpdate()
       text4 = string.format("%.4g", pr)
     end
     local text3 = string.format("%.4g", gp)    
-    if ((sepgp._playerName) and sepgp._playerName == originalName) or ((sepgp_main) and sepgp_main == originalName) then
+    if ((sepgp._playerName) and sepgp._playerName == name) or ((sepgp_main) and sepgp_main == name) then
       text = string.format("(*)%s",text)
       local pr_decay = sepgp:capcalc(ep,gp)
       if pr_decay < 0 then
@@ -505,3 +499,48 @@ end
 
 -- GLOBALS: sepgp_saychannel,sepgp_groupbyclass,sepgp_groupbyarmor,sepgp_groupbyrole,sepgp_raidonly,sepgp_decay,sepgp_minep,sepgp_reservechannel,sepgp_main,sepgp_progress,sepgp_discount,sepgp_log,sepgp_dbver,sepgp_looted
 -- GLOBALS: sepgp,sepgp_prices,sepgp_standings,sepgp_bids,sepgp_loot,sepgp_reserves,sepgp_alts,sepgp_logs
+
+-- ============================================================
+-- EXPORT A SAVEDVARIABLE
+-- Uso: /shootyexport en el chat, luego /quit para guardar
+-- Archivo: WTF/Account/TUNOMBRE/SavedVariables/shootyepgp.lua
+-- ============================================================
+
+function sepgp_standings:ExportToSavedVar()
+  local t = {}
+  local total = 0
+
+  for i = 1, GetNumGuildMembers(1) do
+    local name, _, _, _, class, _, note, officernote, _, _ = GetGuildRosterInfo(i)
+    local ep = (sepgp:get_ep_v3(name, officernote) or 0)
+    local gp = (sepgp:get_gp_v3(name, officernote) or sepgp.VARS.basegp)
+
+    if ep > 0 then
+      local pr = ep / gp
+      table.insert(t, {
+        name  = name,
+        class = class,
+        ep    = ep,
+        gp    = gp,
+        pr    = pr,
+      })
+      total = total + 1
+    end
+  end
+
+  -- Ordenar por PR descendente
+  table.sort(t, function(a, b) return a.pr > b.pr end)
+
+  -- Guardar en SavedVariable global (WoW la escribe a disco al salir)
+  shootyepgp_export_data = t
+
+  sepgp:defaultPrint(string.format(
+    "|cff00ff00[shootyepgp]|r Export listo: %d jugadores. Escribe /quit para guardar el archivo.",
+    total
+  ))
+end
+
+SLASH_SHOOTYEXPORT1 = "/shootyexport"
+SlashCmdList["SHOOTYEXPORT"] = function()
+  sepgp_standings:ExportToSavedVar()
+end
