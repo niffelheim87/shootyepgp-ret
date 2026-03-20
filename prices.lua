@@ -403,37 +403,37 @@ local prices = {
   [16897] = {48,"T2"}; --Stormrage Raiment
   [16898] = {32,"T2"}; --Stormrage Raiment
   [16899] = {32,"T2"}; --Stormrage Raiment
-  [16900] = {40,"T2"}; --Stormrage Raiment
-  [16901] = {32,"T2"}; --Stormrage Raiment
+  --[16900] = {40,"T2"}; --Stormrage Raiment
+  --[16901] = {32,"T2"}; --Stormrage Raiment
   [16902] = {40,"T2"}; --Stormrage Raiment
   [16903] = {32,"T2"}; --Stormrage Raiment
   [16904] = {28,"T2"}; --Stormrage Raiment
   [16905] = {48,"T2"}; --Bloodfang Armor
   [16906] = {32,"T2"}; --Bloodfang Armor
   [16907] = {32,"T2"}; --Bloodfang Armor
-  [16908] = {40,"T2"}; --Bloodfang Armor
-  [16909] = {32,"T2"}; --Bloodfang Armor
+  --[16908] = {40,"T2"}; --Bloodfang Armor
+  --[16909] = {32,"T2"}; --Bloodfang Armor
   [16910] = {32,"T2"}; --Bloodfang Armor
   [16911] = {28,"T2"}; --Bloodfang Armor
   [16912] = {32,"T2"}; --Netherwind Regalia
   [16913] = {32,"T2"}; --Netherwind Regalia
-  [16914] = {40,"T2"}; --Netherwind Regalia
-  [16915] = {32,"T2"}; --Netherwind Regalia
+  --[16914] = {40,"T2"}; --Netherwind Regalia
+  --[16915] = {32,"T2"}; --Netherwind Regalia
   [16916] = {48,"T2"}; --Netherwind Regalia
   [16917] = {40,"T2"}; --Netherwind Regalia
   [16918] = {28,"T2"}; --Netherwind Regalia
   [16919] = {32,"T2"}; --Vestments of Transcendence
   [16920] = {32,"T2"}; --Vestments of Transcendence
-  [16921] = {40,"T2"}; --Vestments of Transcendence
-  [16922] = {32,"T2"}; --Vestments of Transcendence
+  --[16921] = {40,"T2"}; --Vestments of Transcendence
+  --[16922] = {32,"T2"}; --Vestments of Transcendence
   [16923] = {48,"T2"}; --Vestments of Transcendence
   [16924] = {40,"T2"}; --Vestments of Transcendence
   [16925] = {32,"T2"}; --Vestments of Transcendence
   [16926] = {28,"T2"}; --Vestments of Transcendence
   [16927] = {32,"T2"}; --Nemesis Raiment
   [16928] = {32,"T2"}; --Nemesis Raiment
-  [16929] = {40,"T2"}; --Nemesis Raiment
-  [16930] = {32,"T2"}; --Nemesis Raiment
+  --[16929] = {40,"T2"}; --Nemesis Raiment
+  --[16930] = {32,"T2"}; --Nemesis Raiment
   [16931] = {48,"T2"}; --Nemesis Raiment
   [16932] = {40,"T2"}; --Nemesis Raiment
   [16933] = {32,"T2"}; --Nemesis Raiment
@@ -441,32 +441,32 @@ local prices = {
   [16935] = {28,"T2"}; --Dragonstalker Armor
   [16936] = {32,"T2"}; --Dragonstalker Armor
   [16937] = {40,"T2"}; --Dragonstalker Armor
-  [16938] = {32,"T2"}; --Dragonstalker Armor
-  [16939] = {40,"T2"}; --Dragonstalker Armor
+  --[16938] = {32,"T2"}; --Dragonstalker Armor
+  --[16939] = {40,"T2"}; --Dragonstalker Armor
   [16940] = {32,"T2"}; --Dragonstalker Armor
   [16941] = {32,"T2"}; --Dragonstalker Armor
   [16942] = {48,"T2"}; --Dragonstalker Armor
   [16943] = {28,"T2"}; --The Ten Storms
   [16944] = {32,"T2"}; --The Ten Storms
   [16945] = {40,"T2"}; --The Ten Storms
-  [16946] = {32,"T2"}; --The Ten Storms
-  [16947] = {40,"T2"}; --The Ten Storms
+  --[16946] = {32,"T2"}; --The Ten Storms
+  --[16947] = {40,"T2"}; --The Ten Storms
   [16948] = {32,"T2"}; --The Ten Storms
   [16949] = {32,"T2"}; --The Ten Storms
   [16950] = {48,"T2"}; --The Ten Storms
   [16951] = {28,"T2"}; --Judgement Armor
   [16952] = {32,"T2"}; --Judgement Armor
   [16953] = {40,"T2"}; --Judgement Armor
-  [16954] = {32,"T2"}; --Judgement Armor
-  [16955] = {40,"T2"}; --Judgement Armor
+  --[16954] = {32,"T2"}; --Judgement Armor
+  --[16955] = {40,"T2"}; --Judgement Armor
   [16956] = {32,"T2"}; --Judgement Armor
   [16957] = {32,"T2"}; --Judgement Armor
   [16958] = {48,"T2"}; --Judgement Armor  
   [16959] = {28,"T2"}; --Battlegear of Wrath
   [16960] = {32,"T2"}; --Battlegear of Wrath
   [16961] = {40,"T2"}; --Battlegear of Wrath
-  [16962] = {32,"T2"}; --Battlegear of Wrath
-  [16963] = {40,"T2"}; --Battlegear of Wrath
+  --[16962] = {32,"T2"}; --Battlegear of Wrath
+  --[16963] = {40,"T2"}; --Battlegear of Wrath
   [16964] = {32,"T2"}; --Battlegear of Wrath
   [16965] = {32,"T2"}; --Battlegear of Wrath
   [16966] = {48,"T2"}; --Battlegear of Wrath  
@@ -552,6 +552,29 @@ local prices = {
   [19438] = {48,"T2"}; --Ringo's Blizzard Boots
   [19439] = {4,"T2"}; --Interlaced Shadow Jerkin
   [20383] = {40,"T2"}; --Head of Broodlord Lashlayer
+
+
+  --------------------
+  ---- T2 Ragna & Ony
+  --------------------
+  [16955] = {40,"T1"}; --Judgement Armor | Head
+  [16954] = {32,"T1"}; --Judgement Armor | Legs
+  [16963] = {40,"T1"}; --Battlegear of Wrath | Head
+  [16962] = {32,"T1"}; --Battlegear of Wrath | Legs
+  [16947] = {40,"T1"}; --The Ten Storms | Head
+  [16946] = {32,"T1"}; --The Ten Storms | Legs
+  [16939] = {40,"T1"}; --Dragonstalker Armor | Head
+  [16938] = {32,"T1"}; --Dragonstalker Armor | Legs
+  [16929] = {40,"T1"}; --Nemesis Raiment | Head
+  [16930] = {32,"T1"}; --Nemesis Raiment | Legs
+  [16921] = {40,"T1"}; --Vestments of Transcendence | Head
+  [16922] = {32,"T1"}; --Vestments of Transcendence | Legs
+  [16914] = {40,"T1"}; --Netherwind Regalia | Head
+  [16915] = {32,"T1"}; --Netherwind Regalia | Legs
+  [16908] = {40,"T1"}; --Bloodfang Armor | Head
+  [16909] = {32,"T1"}; --Bloodfang Armor | Legs
+  [16900] = {40,"T1"}; --Stormrage Raiment | Head
+  [16901] = {32,"T1"}; --Stormrage Raiment | Legs
 
     -------------------
     --- Molten Core ---
@@ -652,8 +675,8 @@ local prices = {
   [18203] = {16,"T1"}; --Eskhandar's Right Claw
   [18563] = {0,"T1"}; --Bindings of the Windseeker
   [18564] = {0,"T1"}; --Bindings of the Windseeker
-  [18646] = {0,"T1"}; --The Eye of Divinity
-  [18703] = {0,"T1"}; --Ancient Petrified Leaf
+  [18646] = {12,"T1"}; --The Eye of Divinity
+  [18703] = {12,"T1"}; --Ancient Petrified Leaf
   [18803] = {12,"T1"}; --Finkle's Lava Dredger
   [18805] = {32,"T1"}; --Core Hound Tooth
   [18806] = {4,"T1"}; --Core Forged Greaves
@@ -692,6 +715,34 @@ local prices = {
   [19145] = {42,"T1"}; --Robe of Volatile Power
   [19146] = {8,"T1"}; --Wristguards of Stability
   [19147] = {8,"T1"}; --Ring of Spell Power
+  [58205] = {4,"T1"}; --Primal Flameslinger
+  [58206] = {12,"T1"}; --Idol of the Forgotten Wilds
+  [58207] = {12,"T1"}; --Fist of the Flamewaker
+  [58208] = {16,"T1"}; --Shroud of Flowing Magma
+  [58209] = {8,"T1"}; --Sizzling Pyrestone Aureole
+  [58241] = {12,"T1"}; --Totem of Eruption
+  [58213] = {12,"T1"}; --Smoldaris’ Fractured Eye
+  [58211] = {36,"T1"}; --Molten Emberstone
+  [58239] = {4,"T1"}; --Overheated Skyrazors
+  [58241] = {12,"T1"}; --Totem of Eruption
+  [58212] = {12,"T1"}; --Treads of Scalding Rage
+  [58210] = {12,"T1"}; --Grasps of Sundering Power
+  [58242] = {16,"T1"}; --Sulfuron Aegis
+  [58238] = {36,"T1"}; --Runed Wardstone
+  [58237] = {16,"T1"}; --Emberwoven Binding Garments
+  [58215] = {16,"T1"}; --Ash-Forged Greaves
+  [58243] = {12,"T1"}; --Leggings of the Deep Delve
+  [58240] = {12,"T1"}; --Libram of Final Judgement
+  [58244] = {36,"T1"}; --Sigil of Ancient Accord
+  [58214] = {28,"T1"}; --Modrag'zan, Heart of the Mountain
+  [18703] = {12,"T1"}; --Ancient Petrified Leaf
+  [92080] = {55,"T1"}; --Molten Corehound
+  [81260] = {8,"T1"}; --Lavashard Axe
+  [81261] = {8,"T1"}; --Boots of Blistering Flames
+  [81262] = {12,"T1"}; --Core Forged Helmet
+  [81263] = {12,"T1"}; --Lost Dark Iron Chain
+  [81264] = {16,"T1"}; --Shoulderpads of True Flight
+  [81265] = {8,"T1"}; --Ashskin Belt
 
     ---------------------
     --- Single Bosses ---
@@ -775,7 +826,8 @@ sepgp.gp_prices = prices
 local progress_scaling = {
   ["T3"] =   {["T3"]=1,  ["T2.5"]=1,  ["T2"]=1,  ["T1.5"]=1,["T1"]=1},
   ["T2.5"] = {["T3"]=1.5,["T2.5"]=1.5,["T2"]=2,  ["T1.5"]=2,["T1"]=2},
-  ["T2"] =   {["T3"]=2,  ["T2.5"]=2,  ["T2"]=3,  ["T1.5"]=3,["T1"]=3},
+  ["T2"] =   {["T3"]=2,  ["T2.5"]=2,  ["T2"]=9,  ["T1.5"]=3,["T1"]=3},
+ -- ["T2"] =   {["T3"]=2,  ["T2.5"]=2,  ["T2"]=3,  ["T1.5"]=3,["T1"]=3},
   ["T1"] =   {["T3"]=4.5,["T2.5"]=4.5,["T2"]=4.5,["T1.5"]=6,["T1"]=9}
 }
 local function get_adjusted_price(price,tier,progress)
