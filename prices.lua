@@ -744,6 +744,21 @@ local prices = {
   [81264] = {16,"T1"}; --Shoulderpads of True Flight
   [81265] = {8,"T1"}; --Ashskin Belt
 
+  [33073] = {28,"T2"}; --Philoshopher's Barrier
+  [33074] = {84,"T2"}; --Taut Dragonhide Boots
+  [33075] = {36,"T2"}; --Staff of Cleansing Vapors
+  [33076] = {76,"T2"}; --Ichorus
+  [33077] = {16,"T2"}; --Apron of Fuming Protection
+  [33078] = {16,"T2"}; --Vials of Volatine Acid
+  [33079] = {16,"T2"}; --Philosopher's Stone Replica
+  [33080] = {16,"T2"}; --Wingbone Vambraces
+  [33081] = {72,"T2"}; --Flask of Petrified Gold
+  [33083] = {0,"T2"}; --Elementium Sharpening Stone
+  [33084] = {0,"T2"}; --Pristine Chromatic Scale
+  [33085] = {0,"T2"}; --Over-Tinkered Lens
+  [33086] = {16,"T2"}; --Libram of Hallowed Ground
+  [33087] = {16,"T2"}; --Libram of Ardour
+
     ---------------------
     --- Single Bosses ---
     ---------------------
