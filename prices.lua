@@ -569,7 +569,6 @@ local prices = {
   [33084] = {0,"T2"}; --Pristine Chromatic Scale
   [33085] = {0,"T2"}; --Over-Tinkered Lens
   [33086] = {16,"T2"}; --Libram of Hallowed Ground
-  [33087] = {16,"T2"}; --Libram of Ardour
 
 
   --------------------
