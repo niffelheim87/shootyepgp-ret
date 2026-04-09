@@ -637,19 +637,25 @@ function sepgp:TipHook()
     self.hooks[ItemRefTooltip]["OnHide"]()
   end
   )
-  if (AtlasLootTooltip) then
-    self:SecureHook(AtlasLootTooltip, "SetHyperlink", function(this, itemstring)
-      sepgp:AddDataToTooltip(AtlasLootTooltip,nil,itemstring)
-    end)
-    self:HookScript(AtlasLootTooltip, "OnHide", function()
-      if sepgp.extratip:IsVisible() then sepgp.extratip:Hide() end
-      self.hooks[AtlasLootTooltip]["OnHide"]()
-    end)
-  end
 end
 
 function sepgp:delayedInit()
   --table.insert(sepgp_debug,{[date("%b/%d %H:%M:%S")]="delayedInit"})
+
+  -- hook Atlas tooltips con hook directo (al inicio para que no lo corte ningun error posterior)
+  local function hookTip(tip)
+    if tip and not tip._sepgpHooked then
+      tip._sepgpHooked = true
+      local orig = tip.SetHyperlink
+      tip.SetHyperlink = function(this, itemstring)
+        if orig then orig(this, itemstring) end
+        sepgp:AddDataToTooltip(tip, nil, itemstring)
+      end
+    end
+  end
+  hookTip(AtlasLootTooltip)
+  hookTip(AtlasTWLootTooltip)
+
   if (IsInGuild()) then
     local guildName = (GetGuildInfo("player"))
     if (guildName) and guildName ~= "" then
